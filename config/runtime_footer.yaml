@@ -1,24 +1,12 @@
-# Runtime Footer Configuration
-# Add these under display: in ~/.hermes/config.yaml
+# Runtime Footer Config Patch
+# ============================
+# Enables the context-status footer on Slack replies.
 #
-# To enable globally:
-#   display:
-#     runtime_footer:
-#       enabled: true
-#       fields: [model, context_pct, cwd]
+# Footer format: model · context% · cwd
+# Example: qwen3.6-35b-a3b · 25% · ~/.hermes
 #
-# Or per-platform (e.g., Slack only):
-#   display:
-#     platforms:
-#       slack:
-#         runtime_footer:
-#           enabled: true
-#           fields: [model, context_pct, cwd]
-
-# Default fields shown in footer:
-#   model     - Model name (e.g., qwen3.6-35b-a3b)
-#   context_pct - Context token usage % (e.g., 25%)
-#   cwd       - Working directory (e.g., ~/.hermes)
-#
-# Separator: " · " (middle dot)
-# Example output: qwen3.6-35b-a3b · 25% · ~/.hermes
+# HOW TO APPLY:
+# 1. Open ~/.hermes/config.yaml
+# 2. Find display.runtime_footer
+# 3. Change enabled: false to enabled: true
+# 4. Restart the gateway
